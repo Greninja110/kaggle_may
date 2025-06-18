@@ -1,0 +1,28 @@
+2025-05-17 22:56:53,602 - INFO - Loading data...
+2025-05-17 22:56:53,876 - INFO - Dataset shape: (750000, 9)
+2025-05-17 22:56:53,876 - INFO - Dataset columns: ['id', 'Sex', 'Age', 'Height', 'Weight', 'Duration', 'Heart_Rate', 'Body_Temp', 'Calories']
+2025-05-17 22:56:53,877 - INFO - Dataset info:
+id              int64
+Sex            object
+Age             int64
+Height        float64
+Weight        float64
+Duration      float64
+Heart_Rate    float64
+Body_Temp     float64
+Calories      float64
+dtype: object
+2025-05-17 22:56:53,948 - INFO - Training set size: (600000, 7), Test set size: (150000, 7)
+2025-05-17 22:56:53,948 - INFO - Training decision tree regressor model...
+2025-05-17 22:56:54,656 - INFO - Model performance:
+2025-05-17 22:56:54,656 - INFO - Mean Squared Error: 131.74
+2025-05-17 22:56:54,656 - INFO - Root Mean Squared Error: 11.48
+2025-05-17 22:56:54,656 - INFO - R² Score: 0.97
+2025-05-17 22:57:19,057 - INFO - Feature importances:
+2025-05-17 22:57:19,057 - INFO - Duration: 0.9505
+2025-05-17 22:57:19,057 - INFO - Heart_Rate: 0.0319
+2025-05-17 22:57:19,057 - INFO - Age: 0.0142
+2025-05-17 22:57:19,057 - INFO - Sex_male: 0.0034
+2025-05-17 22:57:19,057 - INFO - Body_Temp: 0.0000
+2025-05-17 22:57:19,057 - INFO - Weight: 0.0000
+2025-05-17 22:57:19,057 - INFO - Height: 0.0000

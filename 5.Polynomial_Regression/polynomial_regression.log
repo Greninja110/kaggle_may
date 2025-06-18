@@ -1,0 +1,23 @@
+2025-05-17 22:49:37,111 - INFO - Loading data...
+2025-05-17 22:49:37,386 - INFO - Dataset shape: (750000, 9)
+2025-05-17 22:49:37,386 - INFO - Dataset columns: ['id', 'Sex', 'Age', 'Height', 'Weight', 'Duration', 'Heart_Rate', 'Body_Temp', 'Calories']
+2025-05-17 22:49:37,387 - INFO - Dataset info:
+id              int64
+Sex            object
+Age             int64
+Height        float64
+Weight        float64
+Duration      float64
+Heart_Rate    float64
+Body_Temp     float64
+Calories      float64
+dtype: object
+2025-05-17 22:49:37,462 - INFO - Training set size: (600000, 7), Test set size: (150000, 7)
+2025-05-17 22:49:37,464 - INFO - Training polynomial regression model...
+2025-05-17 22:49:37,464 - INFO - Using polynomial features with degree=2
+2025-05-17 22:49:38,415 - INFO - Model performance:
+2025-05-17 22:49:38,416 - INFO - Mean Squared Error: 19.35
+2025-05-17 22:49:38,416 - INFO - Root Mean Squared Error: 4.40
+2025-05-17 22:49:38,416 - INFO - R² Score: 1.00
+2025-05-17 22:50:00,980 - INFO - Model coefficients analysis:
+2025-05-17 22:50:00,981 - INFO - Top 10 most important features: [('cat__Sex_male^2', 61.33626988877573), ('cat__Sex_male', 61.33626988868288), ('remainder__Body_Temp', 35.726280251647744), ('remainder__Duration', -13.457260476874577), ('cat__Sex_male remainder__Body_Temp', -5.775953307106275), ('remainder__Age', -1.112709542357537), ('cat__Sex_male remainder__Heart_Rate', 0.5473785267922592), ('remainder__Weight', -0.5098749727430129), ('remainder__Body_Temp^2', -0.43825468956450414), ('cat__Sex_male remainder__Age', 0.4187243150173402)]

@@ -1,0 +1,29 @@
+2025-05-17 22:57:47,071 - INFO - Loading data...
+2025-05-17 22:57:47,383 - INFO - Dataset shape: (750000, 9)
+2025-05-17 22:57:47,383 - INFO - Dataset columns: ['id', 'Sex', 'Age', 'Height', 'Weight', 'Duration', 'Heart_Rate', 'Body_Temp', 'Calories']
+2025-05-17 22:57:47,384 - INFO - Dataset info:
+id              int64
+Sex            object
+Age             int64
+Height        float64
+Weight        float64
+Duration      float64
+Heart_Rate    float64
+Body_Temp     float64
+Calories      float64
+dtype: object
+2025-05-17 22:57:47,466 - INFO - Training set size: (600000, 7), Test set size: (150000, 7)
+2025-05-17 22:57:47,467 - INFO - Training random forest regression model...
+2025-05-17 23:00:17,275 - INFO - Model performance:
+2025-05-17 23:00:17,285 - INFO - Mean Squared Error: 14.61
+2025-05-17 23:00:17,285 - INFO - Root Mean Squared Error: 3.82
+2025-05-17 23:00:17,285 - INFO - R² Score: 1.00
+2025-05-17 23:00:17,714 - INFO - Feature importances:
+                 Feature  Importance
+4    remainder__Duration    0.926156
+5  remainder__Heart_Rate    0.041144
+1         remainder__Age    0.022591
+0          cat__Sex_male    0.005951
+3      remainder__Weight    0.002375
+2      remainder__Height    0.001153
+6   remainder__Body_Temp    0.000630

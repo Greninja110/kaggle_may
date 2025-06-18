@@ -1,0 +1,176 @@
+2025-05-19 20:52:21,147 - INFO - Starting regression model comparison for Kaggle Playground Series S5E5...
+2025-05-19 20:52:21,148 - INFO - Evaluation metric: Root Mean Squared Logarithmic Error (RMSLE)
+2025-05-19 20:52:21,148 - INFO - Loading data...
+2025-05-19 20:52:21,425 - INFO - Successfully loaded data from 'playground-series-s5e5/train.csv'
+2025-05-19 20:52:21,425 - INFO - Dataset shape: (750000, 9)
+2025-05-19 20:52:21,425 - INFO - Dataset columns: ['id', 'Sex', 'Age', 'Height', 'Weight', 'Duration', 'Heart_Rate', 'Body_Temp', 'Calories']
+2025-05-19 20:52:21,426 - INFO - Dataset info:
+id              int64
+Sex            object
+Age             int64
+Height        float64
+Weight        float64
+Duration      float64
+Heart_Rate    float64
+Body_Temp     float64
+Calories      float64
+dtype: object
+2025-05-19 20:52:21,611 - INFO - Dataset summary statistics:
+                  id            Age         Height  ...     Heart_Rate      Body_Temp       Calories
+count  750000.000000  750000.000000  750000.000000  ...  750000.000000  750000.000000  750000.000000
+mean   374999.500000      41.420404     174.697685  ...      95.483995      40.036253      88.282781
+std    216506.495284      15.175049      12.824496  ...       9.449845       0.779875      62.395349
+min         0.000000      20.000000     126.000000  ...      67.000000      37.100000       1.000000
+25%    187499.750000      28.000000     164.000000  ...      88.000000      39.600000      34.000000
+50%    374999.500000      40.000000     174.000000  ...      95.000000      40.300000      77.000000
+75%    562499.250000      52.000000     185.000000  ...     103.000000      40.700000     136.000000
+max    749999.000000      79.000000     222.000000  ...     128.000000      41.500000     314.000000
+
+[8 rows x 8 columns]
+2025-05-19 20:52:21,632 - INFO - Missing values:
+id            0
+Sex           0
+Age           0
+Height        0
+Weight        0
+Duration      0
+Heart_Rate    0
+Body_Temp     0
+Calories      0
+dtype: int64
+2025-05-19 20:52:21,633 - INFO - Performing basic exploratory data analysis...
+2025-05-19 20:52:26,464 - INFO - Saved target variable distribution plot to 'plots/calories_distribution.png'
+2025-05-19 20:52:26,775 - INFO - Saved correlation matrix to 'plots/correlation_matrix.png'
+2025-05-19 20:52:26,775 - INFO - Preparing features and target variables...
+2025-05-19 20:52:26,802 - INFO - Categorical columns: ['Sex']
+2025-05-19 20:52:26,802 - INFO - Numerical columns: ['Age', 'Height', 'Weight', 'Duration', 'Heart_Rate', 'Body_Temp']
+2025-05-19 20:52:26,868 - INFO - Training set size: (600000, 7), Test set size: (150000, 7)
+2025-05-19 20:52:26,868 - INFO - ==================================================
+2025-05-19 20:52:26,868 - INFO - Starting model evaluation
+2025-05-19 20:52:26,868 - INFO - ==================================================
+2025-05-19 20:52:26,868 - INFO - 
+--- Simple Linear Regression ---
+2025-05-19 20:52:26,868 - INFO - Training Simple Linear Regression model...
+2025-05-19 20:52:27,157 - INFO - Performing 5-fold cross-validation for Simple Linear Regression...
+2025-05-19 20:52:28,604 - INFO - 5-fold CV RMSLE: 0.5650
+2025-05-19 20:52:28,604 - INFO - Simple Linear Regression model performance:
+2025-05-19 20:52:28,605 - INFO - Mean Squared Error: 111.8302
+2025-05-19 20:52:28,605 - INFO - Root Mean Squared Error: 10.5750
+2025-05-19 20:52:28,605 - INFO - R² Score: 0.9711
+2025-05-19 20:52:28,605 - INFO - RMSLE (competition metric): 0.5652
+2025-05-19 20:52:28,605 - INFO - Training time: 1.74 seconds
+2025-05-19 20:52:29,049 - INFO - 
+--- Ridge Regression ---
+2025-05-19 20:52:29,049 - INFO - Training Ridge Regression model...
+2025-05-19 20:52:29,292 - INFO - Performing 5-fold cross-validation for Ridge Regression...
+2025-05-19 20:52:30,568 - INFO - 5-fold CV RMSLE: 0.5650
+2025-05-19 20:52:30,568 - INFO - Ridge Regression model performance:
+2025-05-19 20:52:30,568 - INFO - Mean Squared Error: 111.8300
+2025-05-19 20:52:30,568 - INFO - Root Mean Squared Error: 10.5750
+2025-05-19 20:52:30,569 - INFO - R² Score: 0.9711
+2025-05-19 20:52:30,569 - INFO - RMSLE (competition metric): 0.5652
+2025-05-19 20:52:30,569 - INFO - Training time: 1.52 seconds
+2025-05-19 20:52:30,953 - INFO - 
+--- Lasso Regression ---
+2025-05-19 20:52:30,953 - INFO - Training Lasso Regression model...
+2025-05-19 20:52:31,287 - INFO - Performing 5-fold cross-validation for Lasso Regression...
+2025-05-19 20:52:33,225 - INFO - 5-fold CV RMSLE: 0.5628
+2025-05-19 20:52:33,226 - INFO - Lasso Regression model performance:
+2025-05-19 20:52:33,226 - INFO - Mean Squared Error: 112.1766
+2025-05-19 20:52:33,226 - INFO - Root Mean Squared Error: 10.5913
+2025-05-19 20:52:33,226 - INFO - R² Score: 0.9711
+2025-05-19 20:52:33,226 - INFO - RMSLE (competition metric): 0.5631
+2025-05-19 20:52:33,226 - INFO - Training time: 2.27 seconds
+2025-05-19 20:52:33,623 - INFO - 
+--- ElasticNet Regression ---
+2025-05-19 20:52:33,624 - INFO - Training ElasticNet model...
+2025-05-19 20:52:33,949 - INFO - Performing 5-fold cross-validation for ElasticNet...
+2025-05-19 20:52:35,628 - INFO - 5-fold CV RMSLE: 0.5726
+2025-05-19 20:52:35,628 - INFO - ElasticNet model performance:
+2025-05-19 20:52:35,629 - INFO - Mean Squared Error: 135.0223
+2025-05-19 20:52:35,629 - INFO - Root Mean Squared Error: 11.6199
+2025-05-19 20:52:35,629 - INFO - R² Score: 0.9652
+2025-05-19 20:52:35,629 - INFO - RMSLE (competition metric): 0.5724
+2025-05-19 20:52:35,629 - INFO - Training time: 2.00 seconds
+2025-05-19 20:52:36,024 - INFO - 
+--- Polynomial Regression ---
+2025-05-19 20:52:37,022 - INFO - Polynomial Regression model performance:
+2025-05-19 20:52:37,022 - INFO - Mean Squared Error: 19.1693
+2025-05-19 20:52:37,022 - INFO - Root Mean Squared Error: 4.3783
+2025-05-19 20:52:37,022 - INFO - R² Score: 0.9951
+2025-05-19 20:52:37,022 - INFO - RMSLE (competition metric): 0.2051
+2025-05-19 20:52:37,023 - INFO - Training time: 1.00 seconds
+2025-05-19 20:52:37,406 - INFO - 
+--- Decision Tree Regressor ---
+2025-05-19 20:52:37,406 - INFO - Training Decision Tree model...
+2025-05-19 20:52:39,782 - INFO - Performing 5-fold cross-validation for Decision Tree...
+2025-05-19 20:52:51,611 - INFO - 5-fold CV RMSLE: 0.0861
+2025-05-19 20:52:51,612 - INFO - Decision Tree model performance:
+2025-05-19 20:52:51,612 - INFO - Mean Squared Error: 26.5050
+2025-05-19 20:52:51,612 - INFO - Root Mean Squared Error: 5.1483
+2025-05-19 20:52:51,612 - INFO - R² Score: 0.9932
+2025-05-19 20:52:51,612 - INFO - RMSLE (competition metric): 0.0862
+2025-05-19 20:52:51,612 - INFO - Training time: 14.21 seconds
+2025-05-19 20:52:52,010 - INFO - 
+--- Random Forest Regressor ---
+2025-05-19 20:52:52,011 - INFO - Training Random Forest model...
+2025-05-19 20:55:21,181 - INFO - Performing 5-fold cross-validation for Random Forest...
+2025-05-19 21:07:51,985 - INFO - 5-fold CV RMSLE: 0.0639
+2025-05-19 21:07:51,985 - INFO - Random Forest model performance:
+2025-05-19 21:07:51,985 - INFO - Mean Squared Error: 14.6100
+2025-05-19 21:07:51,985 - INFO - Root Mean Squared Error: 3.8223
+2025-05-19 21:07:51,985 - INFO - R² Score: 0.9962
+2025-05-19 21:07:51,985 - INFO - RMSLE (competition metric): 0.0634
+2025-05-19 21:07:51,985 - INFO - Training time: 899.97 seconds
+2025-05-19 21:07:52,390 - INFO - 
+--- XGBoost Regressor ---
+2025-05-19 21:07:52,542 - INFO - Training XGBoost model...
+2025-05-19 21:07:53,593 - INFO - Performing 5-fold cross-validation for XGBoost...
+2025-05-19 21:07:58,655 - INFO - 5-fold CV RMSLE: 0.0691
+2025-05-19 21:07:58,656 - INFO - XGBoost model performance:
+2025-05-19 21:07:58,656 - INFO - Mean Squared Error: 13.9537
+2025-05-19 21:07:58,656 - INFO - Root Mean Squared Error: 3.7355
+2025-05-19 21:07:58,656 - INFO - R² Score: 0.9964
+2025-05-19 21:07:58,656 - INFO - RMSLE (competition metric): 0.0682
+2025-05-19 21:07:58,656 - INFO - Training time: 6.11 seconds
+2025-05-19 21:07:59,079 - INFO - 
+--- LightGBM Regressor ---
+2025-05-19 21:07:59,129 - INFO - Training LightGBM model...
+2025-05-19 21:08:01,960 - INFO - Performing 5-fold cross-validation for LightGBM...
+2025-05-19 21:08:07,307 - INFO - 5-fold CV RMSLE: 0.0712
+2025-05-19 21:08:07,308 - INFO - LightGBM model performance:
+2025-05-19 21:08:07,308 - INFO - Mean Squared Error: 14.4140
+2025-05-19 21:08:07,308 - INFO - Root Mean Squared Error: 3.7966
+2025-05-19 21:08:07,308 - INFO - R² Score: 0.9963
+2025-05-19 21:08:07,308 - INFO - RMSLE (competition metric): 0.0687
+2025-05-19 21:08:07,309 - INFO - Training time: 8.18 seconds
+2025-05-19 21:08:07,737 - INFO - ==================================================
+2025-05-19 21:08:07,737 - INFO - Model evaluation completed
+2025-05-19 21:08:07,737 - INFO - ==================================================
+2025-05-19 21:08:07,738 - INFO - 
+Model Comparison Results (sorted by RMSLE):
+2025-05-19 21:08:07,738 - INFO - ====================================================================================================
+2025-05-19 21:08:07,740 - INFO - 
+                   Model        MSE      RMSE       R²    RMSLE  CV RMSLE  Training Time (s)
+           Random Forest  14.609953  3.822297 0.996230 0.063408  0.063897         899.974540
+                 XGBoost  13.953671  3.735461 0.996400 0.068180  0.069073           6.114481
+                LightGBM  14.413990  3.796576 0.996281 0.068683  0.071249           8.179094
+           Decision Tree  26.505012  5.148302 0.993161 0.086174  0.086085          14.206165
+   Polynomial Regression  19.169331  4.378279 0.995054 0.205061       NaN           0.998046
+        Lasso Regression 112.176564 10.591344 0.971056 0.563090  0.562807           2.272759
+        Ridge Regression 111.829952 10.574968 0.971145 0.565232  0.564958           1.518993
+Simple Linear Regression 111.830238 10.574982 0.971145 0.565232  0.564959           1.735718
+              ElasticNet 135.022259 11.619908 0.965161 0.572426  0.572614           2.003976
+2025-05-19 21:08:07,740 - INFO - ====================================================================================================
+2025-05-19 21:08:07,742 - INFO - Saved model comparison results to 'model_comparison_results.csv'
+2025-05-19 21:08:07,888 - INFO - Saved model comparison plot to 'plots/model_comparison.png'
+2025-05-19 21:08:07,889 - INFO - 
+Based on RMSLE, the best performing model is: Random Forest with RMSLE = 0.0634
+2025-05-19 21:08:07,889 - INFO - 
+Next Steps for Model Improvement:
+2025-05-19 21:08:07,889 - INFO - 1. Feature engineering - Create interaction terms and domain-specific features
+2025-05-19 21:08:07,889 - INFO - 2. Hyperparameter tuning - Use GridSearchCV or RandomizedSearchCV for the best model
+2025-05-19 21:08:07,889 - INFO - 3. Ensemble methods - Create a meta-model using predictions from top performers
+2025-05-19 21:08:07,889 - INFO - 4. More advanced preprocessing - Try different scaling methods or outlier removal
+2025-05-19 21:08:07,889 - INFO - 
+Job completed successfully!

@@ -1,0 +1,20 @@
+2025-05-17 11:13:16,761 - INFO - Loading data...
+2025-05-17 11:13:17,036 - INFO - Dataset shape: (750000, 9)
+2025-05-17 11:13:17,036 - INFO - Dataset columns: ['id', 'Sex', 'Age', 'Height', 'Weight', 'Duration', 'Heart_Rate', 'Body_Temp', 'Calories']
+2025-05-17 11:13:17,037 - INFO - Dataset info:
+id              int64
+Sex            object
+Age             int64
+Height        float64
+Weight        float64
+Duration      float64
+Heart_Rate    float64
+Body_Temp     float64
+Calories      float64
+dtype: object
+2025-05-17 11:13:17,121 - INFO - Training set size: (600000, 7), Test set size: (150000, 7)
+2025-05-17 11:13:17,121 - INFO - Training linear regression model...
+2025-05-17 11:13:17,343 - INFO - Model performance:
+2025-05-17 11:13:17,344 - INFO - Mean Squared Error: 122.30
+2025-05-17 11:13:17,344 - INFO - Root Mean Squared Error: 11.06
+2025-05-17 11:13:17,344 - INFO - R² Score: 0.97

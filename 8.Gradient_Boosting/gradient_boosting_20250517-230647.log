@@ -1,0 +1,62 @@
+2025-05-17 23:06:47,223 - INFO - Loading data...
+2025-05-17 23:06:47,483 - INFO - Dataset shape: (750000, 9)
+2025-05-17 23:06:47,483 - INFO - Dataset columns: ['id', 'Sex', 'Age', 'Height', 'Weight', 'Duration', 'Heart_Rate', 'Body_Temp', 'Calories']
+2025-05-17 23:06:47,484 - INFO - Dataset info:
+id              int64
+Sex            object
+Age             int64
+Height        float64
+Weight        float64
+Duration      float64
+Heart_Rate    float64
+Body_Temp     float64
+Calories      float64
+dtype: object
+2025-05-17 23:06:47,491 - INFO - Sample data:
+   id     Sex  Age  Height  Weight  Duration  Heart_Rate  Body_Temp  Calories
+0   0    male   36   189.0    82.0      26.0       101.0       41.0     150.0
+1   1  female   64   163.0    60.0       8.0        85.0       39.7      34.0
+2   2  female   51   161.0    64.0       7.0        84.0       39.8      29.0
+3   3    male   20   192.0    90.0      25.0       105.0       40.7     140.0
+4   4  female   38   166.0    61.0      25.0       102.0       40.6     146.0
+2025-05-17 23:06:47,515 - INFO - Missing values per column:
+id            0
+Sex           0
+Age           0
+Height        0
+Weight        0
+Duration      0
+Heart_Rate    0
+Body_Temp     0
+Calories      0
+dtype: int64
+2025-05-17 23:06:47,594 - INFO - Training set size: (600000, 7), Test set size: (150000, 7)
+2025-05-17 23:06:47,594 - INFO - Training XGBoost model...
+2025-05-17 23:06:48,335 - INFO - XGBoost training completed in 0.74 seconds
+2025-05-17 23:06:48,406 - INFO - XGBoost Model performance:
+2025-05-17 23:06:48,407 - INFO - Mean Squared Error: 15.14
+2025-05-17 23:06:48,407 - INFO - Root Mean Squared Error: 3.89
+2025-05-17 23:06:48,407 - INFO - R² Score: 1.00
+2025-05-17 23:06:48,407 - INFO - Training LightGBM model...
+2025-05-17 23:06:49,097 - INFO - LightGBM training completed in 0.69 seconds
+2025-05-17 23:06:49,223 - INFO - LightGBM Model performance:
+2025-05-17 23:06:49,224 - INFO - Mean Squared Error: 15.10
+2025-05-17 23:06:49,224 - INFO - Root Mean Squared Error: 3.89
+2025-05-17 23:06:49,224 - INFO - R² Score: 1.00
+2025-05-17 23:06:49,224 - INFO - Model Comparison:
+2025-05-17 23:06:49,224 - INFO - XGBoost - RMSE: 3.89, R²: 1.00, Training Time: 0.74s
+2025-05-17 23:06:49,224 - INFO - LightGBM - RMSE: 3.89, R²: 1.00, Training Time: 0.69s
+2025-05-17 23:06:49,224 - INFO - Best model based on RMSE: LightGBM with RMSE of 3.89
+2025-05-17 23:06:50,028 - INFO - Saved visualization to 'gradient_boosting_results.png'
+2025-05-17 23:07:12,176 - INFO - Analyzing feature importance...
+2025-05-17 23:07:12,194 - INFO - Feature importance:
+       Feature  Importance
+4     Duration    0.905046
+5   Heart_Rate    0.054169
+1          Age    0.022041
+0  Sex_encoded    0.012454
+3       Weight    0.004453
+6    Body_Temp    0.001562
+2       Height    0.000275
+2025-05-17 23:07:12,349 - INFO - Saved feature importance visualization to 'feature_importance.png'
+2025-05-17 23:07:18,548 - INFO - Saved models to disk as 'xgboost_model.pkl' and 'lightgbm_model.pkl'

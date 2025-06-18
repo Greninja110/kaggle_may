@@ -1,0 +1,29 @@
+2025-05-17 22:47:17,357 - INFO - Loading data...
+2025-05-17 22:47:17,635 - INFO - Dataset shape: (750000, 9)
+2025-05-17 22:47:17,635 - INFO - Dataset columns: ['id', 'Sex', 'Age', 'Height', 'Weight', 'Duration', 'Heart_Rate', 'Body_Temp', 'Calories']
+2025-05-17 22:47:17,636 - INFO - Dataset info:
+id              int64
+Sex            object
+Age             int64
+Height        float64
+Weight        float64
+Duration      float64
+Heart_Rate    float64
+Body_Temp     float64
+Calories      float64
+dtype: object
+2025-05-17 22:47:17,712 - INFO - Training set size: (600000, 7), Test set size: (150000, 7)
+2025-05-17 22:47:17,712 - INFO - Training ElasticNet regression model...
+2025-05-17 22:47:18,239 - INFO - Model performance:
+2025-05-17 22:47:18,239 - INFO - Mean Squared Error: 126.48
+2025-05-17 22:47:18,239 - INFO - Root Mean Squared Error: 11.25
+2025-05-17 22:47:18,239 - INFO - R² Score: 0.97
+2025-05-17 22:47:18,248 - INFO - Feature importance (coefficients):
+2025-05-17 22:47:18,248 - INFO -       Feature  Coefficient
+6   Body_Temp   -12.076717
+4    Duration     6.240411
+5  Heart_Rate     1.948744
+0    Sex_male    -0.562140
+1         Age     0.530500
+3      Weight     0.208414
+2      Height    -0.112496
